@@ -11,5 +11,5 @@ class GreetingApplet(Applet):
         if self.greeting:
             res.say(self.greeting)
         if self.next_applet:
-            self.redirect(res, self.next_applet)
+            self.redirect(req, res, self.next_applet)
         return res

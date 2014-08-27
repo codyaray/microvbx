@@ -18,5 +18,5 @@ class Applet(object):
             return res.say(value, voice=voice, language=language)
 
     @staticmethod
-    def redirect(res, url=""):
-        return res.redirect("/?applet=%s" % url if url else "")
+    def redirect(req, res, url):
+        return res.redirect("%s?applet=%s" % (req.path, url))
